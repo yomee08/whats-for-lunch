@@ -14,13 +14,20 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
-}
+  if (!hungry) {
+    console.log("You're not hungry, get back to work!");
+  } else if (availableTime < 20) {
+    console.log("Pick something up and eat it in the lab.");
+  } else if (availableTime >= 20 && availableTime <= 30) {
+    console.log("Try a place nearby.");
+  } else {
+    console.log("You're in a bootcamp. Reconsider how much time you actually have to spare!");
+  }
+};
 
 
 /*
- * This is some test runner code that's simply calling our whatToDoForLunch function
- * defined above to verify we're making the right decisions. Do not modify it!
+ * Test Scenarios
  */
 
 console.log("I'm hungry and I have 20 minutes for lunch.");
